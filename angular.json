@@ -1,0 +1,101 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "pixicore": {
+      "projectType": "library",
+      "root": "projects/pixicore",
+      "sourceRoot": "projects/pixicore/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/pixicore/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/pixicore/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/pixicore/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/pixicore/src/test.ts",
+            "tsConfig": "projects/pixicore/tsconfig.spec.json",
+            "karmaConfig": "projects/pixicore/karma.conf.js"
+          }
+        }
+      }
+    },
+    "pixi": {
+      "projectType": "library",
+      "root": "projects/pixi",
+      "sourceRoot": "projects/pixi/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/pixi/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/pixi/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/pixi/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/pixi/src/test.ts",
+            "tsConfig": "projects/pixi/tsconfig.spec.json",
+            "karmaConfig": "projects/pixi/karma.conf.js"
+          }
+        }
+      }
+    },
+    "pixieditor": {
+      "projectType": "library",
+      "root": "projects/pixieditor",
+      "sourceRoot": "projects/pixieditor/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/pixieditor/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/pixieditor/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/pixieditor/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/pixieditor/src/test.ts",
+            "tsConfig": "projects/pixieditor/tsconfig.spec.json",
+            "karmaConfig": "projects/pixieditor/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "pixicore"
+}

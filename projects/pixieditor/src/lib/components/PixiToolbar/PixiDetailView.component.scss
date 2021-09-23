@@ -1,0 +1,25 @@
+
+.detailview {
+  padding: 4px;
+}
+
+.detailview__item {
+  display: flex;
+  margin-bottom: 2px;
+}
+
+.detailview__label {
+  display: inline-block;
+  color: #c80000;
+  padding-right: 5px;
+
+  &:after {
+    content: ":";
+    color: #000;
+  }
+
+  .dark-mode & {
+    color: #35d4c7;
+  }
+}
+
