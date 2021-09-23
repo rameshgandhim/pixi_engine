@@ -3,7 +3,7 @@ Core Layer for which allows pixi components to be managed from JSON (a.k.a Scene
 
 # PixiEditor
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.4.
+Editor Layer which offers updates to scene realtime.
 
 # Sample Game
 
